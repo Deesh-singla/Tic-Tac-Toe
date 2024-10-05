@@ -16,6 +16,7 @@ submitBtn.addEventListener("click", () => {
     Player1 = player1Input.value;
     Player2 = player2Input.value;
     currentPlayer.textContent = `${Player1}'s Turn`;
+    reset();
 })
 
 for (let i = 0; i < 3; i++) {
@@ -33,14 +34,14 @@ let z = 0;
 boxes.forEach(box => {
     box.addEventListener("click", () => {
         if (box.textContent === '' && !isWinnerDeclared) {
-            currentPlayer.textContent = `${Player1}'s Turn`;
             if (z % 2 == 0) {
                 box.textContent = 'X'
+                currentPlayer.textContent = `${Player2}'s Turn`;
 
             }
             else {
-                currentPlayer.textContent = `${Player2}'s Turn`;
                 box.textContent = 'O'
+                currentPlayer.textContent = `${Player1}'s Turn`;
             }
             z++;
             winnerCheck();
