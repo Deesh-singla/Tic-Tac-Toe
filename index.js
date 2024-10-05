@@ -66,8 +66,8 @@ function winnerCheck() {
 function checkLine(a, b, c) {
     if (a == b && b == c && a != '' && b != '' && c != '') {
         isWinnerDeclared = true;
-        if (a == 'X') result.textContent = `X is winner`;
-        else result.textContent = `O is winner`;
+        if (a == 'X') result.textContent = `${Player1} is winner`;
+        else result.textContent = `${Player2} is winner`;
         document.body.append(result);
     }
     else return false;
