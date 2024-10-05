@@ -5,13 +5,13 @@ let currentPlayer = document.getElementById("currentPlayer");
 let submitBtn = document.getElementById("submit")
 let resetBtn = document.getElementById("reset");
 let result = document.createElement('h1');
-let isWinnerDeclared=false;
-let isSubmit=false;
+let isWinnerDeclared = false;
+let isSubmit = false;
 let gameGrid = [];
 let Player1 = 'Player 1';
 let Player2 = 'Player 2';
 
-if(!isSubmit) currentPlayer.textContent = `${Player1}'s Turn`;
+if (!isSubmit) currentPlayer.textContent = `${Player1}'s Turn`;
 submitBtn.addEventListener("click", () => {
     Player1 = player1Input.value;
     Player2 = player2Input.value;
@@ -44,8 +44,8 @@ boxes.forEach(box => {
             }
             z++;
             winnerCheck();
-            if(!isWinnerDeclared && z==9){
-                result.textContent=`It's Draw`;
+            if (!isWinnerDeclared && z == 9) {
+                result.textContent = `It's Draw`;
                 document.body.append(result);
             }
         }
@@ -64,8 +64,8 @@ function winnerCheck() {
 
 function checkLine(a, b, c) {
     if (a == b && b == c && a != '' && b != '' && c != '') {
-        isWinnerDeclared=true;
-        if (a == 'X') result.textContent =`X is winner`;
+        isWinnerDeclared = true;
+        if (a == 'X') result.textContent = `X is winner`;
         else result.textContent = `O is winner`;
         document.body.append(result);
     }
@@ -76,8 +76,8 @@ function reset() {
     boxes.forEach(box => {
         box.textContent = '';
     })
-    result.textContent='';
-    isWinnerDeclared=false
+    result.textContent = '';
+    isWinnerDeclared = false
     currentPlayer.textContent = `${Player1}'s Turn`;
     z = 0;
 }
