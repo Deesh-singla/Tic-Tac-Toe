@@ -78,6 +78,7 @@ const GameBoard = (() => {
                 x.textContent = '';
             })
             turn = 0;
+            updatePlayerName();
         })
     }
     const backbtn = () => {
