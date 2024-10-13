@@ -1,0 +1,65 @@
+body{
+    font-family:'Varela Round', sans-serif  ;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #4C5C68;
+    color:#b0E4DB;
+}
+.box{
+    height: 100px;
+    width:100px;
+    border: 2px solid black;
+    box-shadow: 2px 1px 2px black;
+    border-radius:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+.box:hover{
+    border: 2px solid #b0E4DB;
+}
+a{
+    text-decoration: none;
+}
+#main{
+    width: 360px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+#playerName{
+    font-size: 30px;
+    border: 3px solid black;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #b0E4DB;
+    color: black;
+    border-radius: 10px;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+    border-bottom: 5px solid black;
+    margin-top: 5px;
+}
+#back{
+    margin-left: 40px;
+    padding:8px;
+    font-size: 15px;
+    border-radius:10px ;
+    padding: 15px;
+    width: 100px;
+}
+#reset{
+    margin-left: 50px;
+    font-size: 15px;
+    border-radius:10px ;
+    padding: 15px;
+    width: 130px;
+}
+
+
